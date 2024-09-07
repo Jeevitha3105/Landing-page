@@ -3,7 +3,7 @@ import { Navbar } from '../components/Navbar'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import '../styles/Home.css'
 import Footer from '../components/Footer';
-import ImageSlider from '../pages/ImageSlider';
+import ImageSlider from '../components/sliders/ImageSlider';
 import banner1 from "../assets/home/banner.png"
 import banner2 from "../assets/home/banner2.png"
 import banner3 from "../assets/home/banner3.png"
