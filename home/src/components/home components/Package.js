@@ -16,6 +16,7 @@ export default function Package() {
         Elevate your spaces with Vedar Designs & Interior Fitouts L.L.C.
         Experience the fusion
       </p>
+      <div className="line"></div>
     </div>
 
     <div className="package-item">

@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-    <div className='home-div slider-container'>
+    <div className='home-div slider-container' style={{zIndex:"1"}}>
     <ImageSlider images={images} interval={3000} />
         <Navbar />
         <div className='text-div'>
@@ -49,7 +49,9 @@ export default function Home() {
     
     </div>
 
-    <div className="main-div">
+    <div className='overlay'>
+
+    <div className="main-div" style={{backgroundColor:"white"}}>
         <div className="left">
           <div>
             <h2>25+</h2>
@@ -69,7 +71,7 @@ export default function Home() {
           <p>CEDAR INTERIOR DESIGNS</p>
           <h1>Creative solution by professional designers</h1>
         </div>
-      </div>
+    </div>
 
       <hr
         style={{
@@ -88,6 +90,7 @@ export default function Home() {
     <QA />
     <Explore />
     <Footer />
+    </div>
     </>
   )
 }

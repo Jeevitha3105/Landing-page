@@ -15,10 +15,15 @@
   overflow: hidden;
 }
 
+.slider img{
+  width: 100%;
+  height: 100%;
+}
+
 /* Overlay text-div over the slider */
 .text-div {
   padding: 0 40px;
-  padding-bottom: 20px;
+  padding-bottom: 70px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -41,8 +46,16 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 16.25px;
-  letter-spacing: 36%;
+  letter-spacing: 5.25px;
   color: #ffffff;
+  width: 272px;
+  height: 40px;
+  border-radius: 21px;
+  background-color: #1D202940;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .left-text h1 {
@@ -97,7 +110,17 @@
 .main-div {
   display: flex;
   margin: 55px 40px;
+  
+}
+
+.overlay {
+  position: relative; /* Positioned in relation to home-div */
+  z-index: 3; /* Ensure it's above home-div */
+  overflow: hidden; /* Ensure the content respects the border-radius */
+  background-color: white; /* Background color */
+  z-index: 3; /* Ensure it's above other content */
   border-radius: 20px 20px 0 0;
+  top: -30px;
 }
 
 .left {
@@ -461,8 +484,12 @@
 
   .package-text{
     text-align: center;
-    /* margin: 50px 0; */
     padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .package-text h1 {
@@ -481,6 +508,14 @@
     color: #323232;
   }
 
+  .line{
+    width: 45.5px;
+    border: 1px solid #D18F44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 
   .package-item{
     display: flex;
@@ -637,7 +672,15 @@
   margin: 45px 40px;
 }
 
-.works h1{
+.works-text{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.works-text h1{
   font-size: 36px;
   font-weight: 400;
   line-height: 43.88px;
@@ -645,18 +688,18 @@
   text-align: center;
 }
 
-.works p{
+.works-text p{
   font-size: 14px;
   font-weight: 400;
   line-height: 17.07px;
   text-align: center;
-  margin: 10px 0 50px 0;
 }
-
+/* 
 .cards-div{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
+  margin-top: 40px;
 }
 
 .cards-div .card{
@@ -716,7 +759,81 @@
   color: #FCFCFC;
   padding: 10px 20px;
   width: 100%;
+} */
+
+
+.cards-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 40px;
 }
+
+.cards-div .card {
+  position: relative; /* Required for absolute positioning of the text */
+  height: 759px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  transition: background-image 0.3s ease, align-items 0.3s ease; /* Smooth transition for background and text alignment */
+}
+
+.card1 {
+  background-image: url('../assets/home/kitchen.png');
+}
+
+.card2 {
+  background-image: url('../assets/home/bedroom.png');
+}
+
+.card3 {
+  background-image: url('../assets/home/living.png');
+}
+
+.card4 {
+  background-image: url('../assets/home/dining.png');
+}
+
+/* Change background image on hover */
+.card1:hover {
+  background-image: url('../assets/home/kitchen-clr.png'); /* Change to the hover image */
+}
+
+.card2:hover {
+  background-image: url('../assets/home/bedroom-clr.png'); /* Change to the hover image */
+}
+
+.card3:hover {
+  background-image: url('../assets/home/living-clr.png'); /* Change to the hover image */
+}
+
+.card4:hover {
+  background-image: url('../assets/home/dining-clr.png'); /* Change to the hover image */
+}
+
+/* Center the text initially */
+.card div {
+  background-color: rgba(52, 52, 52, 0.7); /* Slightly transparent background for text */
+  color: #FCFCFC;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center; /* Center text inside the div */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Move text to the bottom on hover */
+.card:hover div {
+  position: absolute; /* Position the text absolutely */
+  bottom: 0; /* Stick to the bottom */
+  background-color: rgba(52, 52, 52, 0.7); /* Slightly transparent background for text */
+}
+
 
 
 /* insights */

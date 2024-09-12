@@ -4,9 +4,10 @@ import "../../styles/Home.css";
 export default function Works() {
   return (
     <div className="works">
-    <div>
+    <div className='works-text'>
       <h1><span style={{color:"#DE9439"}}>SOME OF</span> OUR WORKS</h1>
       <p>Elevate your spaces with Vedar Designs & Interior Fitouts L.L.C. Experience the fusion</p>
+      <div className="line"></div>
     </div>
 
     <div className="cards-div">
